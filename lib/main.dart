@@ -21,7 +21,7 @@ class TaskScreen extends StatefulWidget {
 }
 
 class _TaskScreenState extends State<TaskScreen> {
-  List<Task> tasks = [];
+  List<String> taskNames = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,11 +29,13 @@ class _TaskScreenState extends State<TaskScreen> {
         title: Text("Tarefas"),
         backgroundColor: Colors.blueAccent,
       ),
-      body: ListView(children: tasks),
+      body: ListView(children: taskNames.map((name) => Task(name)).toList()),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
-          tasks.add(Task('Nova Tarefa'));
+          setState(() {
+            taskNames.add('Teste 1');
+          });
         },
       ),
     );
