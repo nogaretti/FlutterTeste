@@ -1,4 +1,4 @@
-# wegmethods2
+# alura_flutter_curso_1
 
 A new Flutter project.
 
